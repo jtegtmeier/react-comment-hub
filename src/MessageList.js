@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Rebase from 're-base'
+import RandomColor from 'randomcolor'
 
 var base = Rebase.createClass({
     apiKey: "AIzaSyCRoDGDG1jtipXaSCHNC5qoMwV5UCZ-MIA",
@@ -42,7 +43,10 @@ class MessageList extends Component {
       <div className="messages-container" ref={(div) => this.messageContainer = div}>
         {this.state.messages.map((message, index) =>
           <div key={index} className="message-line">
-            <span className="user-name">{message.user + ": "}</span>
+            <span className="user-name"
+              style={{color: RandomColor({luminosity: 'dark', seed: message.user})}}>
+                {message.user + ": "}
+            </span>
             <span className="comment-text">{message.comment}</span>
           </div>
         )}
