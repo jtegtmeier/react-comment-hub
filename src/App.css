@@ -1,28 +1,51 @@
-*{
-  border: 1px black solid;
+body{
+  min-width: 250px;
+  background: rgb(61, 61, 61);
 }
 
-.App {
+.app{
+  width: 95%;
+  margin: 10px auto;
+  max-width: 550px;
+}
+
+h2{
+  color: rgb(184, 213, 202);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h4{
+  color: rgb(184, 213, 202);
 }
 
-.App-header {
-  background-color: #222;
+a{
+  color: rgb(195, 140, 252);
+}
+
+.messages-container{
+  border: 2px grey solid;
+  border-radius: 2px;
+  box-shadow: 2px 5px 10px black;
+  padding: 5px;
+  overflow-y: scroll;
   height: 150px;
-  padding: 20px;
-  color: white;
+  background: rgb(255, 255, 255);
 }
 
-.App-intro {
-  font-size: large;
+.input-form{
+  margin: 20px 0;
+  background: rgb(121, 121, 121);
+  border-radius: 5px;
+  color: rgb(157, 255, 115);
+  box-shadow: 2px 5px 10px black;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.input-form > *{
+  padding: 8px 10px;
+}
+
+.input-form textarea{
+  width: 75%;
+  min-width: 220px;
+  resize: none;
 }

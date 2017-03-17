@@ -10,7 +10,7 @@ var base = Rebase.createClass({
 })
 
 
-class UserInput extends Component {
+class InputBox extends Component {
   constructor(props){
     super(props)
     this.state = {}
@@ -40,12 +40,12 @@ class UserInput extends Component {
 
   render(){
     return(
-      <div>
-        <div>
-          User:<br/>
+      <div className="input-form">
+        <div className="input-user">
+          User Name:<br/>
           <input ref="user" placeholder="Enter a user name..."/>
         </div>
-        <div>
+        <div className="input-comment">
           Message:<br/>
           <textarea ref="comment" onKeyUp={this.addMessage.bind(this)} placeholder="Type and hit enter..."/>
         </div>
@@ -54,4 +54,4 @@ class UserInput extends Component {
   }
 }
 
-export default UserInput
+export default InputBox

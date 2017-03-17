@@ -23,20 +23,27 @@ class MessageList extends Component {
       state: 'messages',
       asArray: true
     })
-    console.log(this.state)
+  }
+
+  componentDidUpdate() {
+    this.scrollToEnd()
   }
 
   componentWillUnmount(){
     base.removeBinding(this.ref);
   }
 
+  scrollToEnd(){
+    this.messageContainer.scrollTop = this.messageContainer.scrollHeight
+  }
+
   render() {
     return(
-      <div className="messagesContainer">
+      <div className="messages-container" ref={(div) => this.messageContainer = div}>
         {this.state.messages.map((message, index) =>
-          <div key={index} className="messageLine">
-            <span className="userName">{message.user + ": "}</span>
-            <span className="commentText">{message.comment}</span>
+          <div key={index} className="message-line">
+            <span className="user-name">{message.user + ": "}</span>
+            <span className="comment-text">{message.comment}</span>
           </div>
         )}
       </div>
