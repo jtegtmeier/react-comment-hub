@@ -9,6 +9,11 @@ body{
   max-width: 550px;
 }
 
+h1{
+  color: rgb(255, 211, 171);
+  text-align: center;
+}
+
 h2{
   color: rgb(184, 213, 202);
   text-align: center;
